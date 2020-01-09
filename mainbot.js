@@ -15,7 +15,8 @@ function activateChildren(parent){
 }
 
 activateChildren(document);
-alert(childrenactivated);
+console.log(childrenactivated);
+alert("The website is ready to edit. Happy editing :)");
 
 
 const elements=document.querySelectorAll('.et');
@@ -353,4 +354,6 @@ for (texts of btns) {
   });
 }
 
-
+var cssLink = document.createElement('div');
+cssLink.innerHTML="<link href=\"classicStyle.css\" rel=\"stylesheet\" type=\"text/css\">";
+document.body.appendChild(cssLink);
