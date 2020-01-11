@@ -337,3 +337,7 @@ for (texts of btns) {
 var cssLink = document.createElement('div');
 cssLink.innerHTML="<link href=\"classicStyle.css\" rel=\"stylesheet\" type=\"text/css\">";
 document.head.appendChild(cssLink);
+
+var htmlElement1 = document.createElement('div');
+htmlElement1.innerHTML="<a href=\"mailto:oneandonlytobe@gmail.com\" class=\"a5\"><img src=\"Images/question-circle-solid.svg\" width=\"35px\"></a><div class=\"Download a4\" onclick=\"download()\"><img src=\"Images/download-solid.svg\" width=\"30px\"></div>";
+document.body.appendChild(htmlElement1);
