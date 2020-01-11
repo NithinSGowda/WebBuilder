@@ -77,6 +77,7 @@ border: 0.5px solid grey;
 	width: 100%;
 	background-color: rgba(0, 0, 0, 0.822);
     top: 0;	
+    display: none;
 }
 .inpi{
 	border: 3px solid rgb(47, 0, 255);
