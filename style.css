@@ -68,4 +68,59 @@
 border-radius: 3px;
 background-color: rgb(0, 98, 255);
 padding: 0 20px 0 20px;
+border: 0.5px solid grey;
+}
+
+.inpt{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.822);
+    top: 0;	
+}
+.inpi{
+	border: 3px solid rgb(47, 0, 255);
+    position: fixed;
+    border-radius: 3px;
+	top: 50%;
+	right: 50%;
+	margin: -105.5px -177.75px 0 0 ;
+	background-color: white;
+    padding: 2em;
+    background-color: rgb(46, 45, 45);    
+}
+.inpb{
+    margin: 0.75em;
+    background-color: blue;
+    border: 0px solid black;
+    border-radius: 3px;
+    padding: 1px 10px 0px 10px;
+}
+
+.inpl{
+    display: none;
+}
+
+.inpt textarea{
+    background-color: rgb(14, 14, 14);
+    color: white;
+    padding: 10px;
+    resize: none;
+    height: 10em;
+}
+
+.inpt #L{
+    position: absolute;
+    top: 9%;
+}
+
+.inpt .submit{
+    position: absolute;
+    left: 40%;
+    margin-top: 2%;
+    margin-bottom: 7%;
+}
+
+.inpt .pickerg{
+    border: none;
 }

@@ -341,3 +341,27 @@ document.head.appendChild(cssLink);
 var htmlElement1 = document.createElement('div');
 htmlElement1.innerHTML="<a href=\"mailto:oneandonlytobe@gmail.com\" class=\"a5\"><img src=\"Images/question-circle-solid.svg\" width=\"35px\"></a><div class=\"Download a4\" onclick=\"download()\"><img src=\"Images/download-solid.svg\" width=\"30px\"></div>";
 document.body.appendChild(htmlElement1);
+
+/*
+<div class="inpt">
+		<div class="inpi">
+			<textarea name="text" style = "height: 10em;" placeholder="Enter the text here"></textarea>
+			<button class="inpb" id="L" >Insert Link</button><br>
+			<button class="inpb" id="B">B</button>
+			<button class="inpb" id="I">I</button>
+			<button class="inpb" id="U">U</button>
+			<input type="checkbox" name="shadow">Shadow&nbsp;&nbsp;
+			<input type="color" class="pickerg"><br>
+			<button class="submit">Submit</button>
+		</div>
+	</div>
+
+	<div class="inpl">
+		<div class="inpi">
+			<textarea name="text" placeholder="Enter the text here"></textarea><br><br>
+			<textarea name="link" placeholder="Enter the link here"></textarea><br><br>
+			
+			<button class="submit">Submit</button>
+		</div>
+	</div>
+*/
