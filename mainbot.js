@@ -38,7 +38,7 @@ function changeColor(){
     var clr2=document.querySelector('.picker2').value;
     blueArea.style.backgroundImage = 'linear-gradient(50deg,' + clr1 + ', ' + clr2 + ' 100%)';
 }
-
+/*
 function dl(x){
     x = typeof x !== 'undefined' ? x : 'black' ; 
     document.body.style.backgroundColor = x;
@@ -54,7 +54,8 @@ function dl(x){
 
     
 }
-
+*/
+/*
 function hl(x){
   document.querySelector('.blue').style.backgroundImage='linear-gradient(' + x + ',' + x + ')';
 }
@@ -73,6 +74,7 @@ function remover(e){
   document.querySelector('.jss').innerHTML=' ';
 
 }
+*/
 
 for(element of elements)
 {dragElement(element);}
@@ -128,6 +130,7 @@ function dragElement(elmnt) {
   }
 }
 
+/*
 function nxt1(){
   butn=document.querySelector('.tt1')
   butn.style.display='none';
@@ -150,7 +153,7 @@ function nxt3(){
   console.log("Done")
 }
 
-
+*/
 
 
 
@@ -160,8 +163,6 @@ function titleCase(str) {
   for (var i = 0; i < str.length; i++) {
     str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1); 
   }
-  
-  
   return str.join(' '); 
 }
 
@@ -173,7 +174,7 @@ function removeActive()
 }
 
 
-
+/* VOICE
 
 const smallBox = document.getElementsByClassName('c');
 		const header = document.querySelector('.blue');
@@ -313,7 +314,7 @@ const smallBox = document.getElementsByClassName('c');
 		recognition.addEventListener('end',recognition.start);
 	
 		recognition.start();
-		
+*/		
 
 // Get all buttons with class="btn" inside the container
 const btns = document.querySelectorAll(".et");
@@ -335,4 +336,4 @@ for (texts of btns) {
 
 var cssLink = document.createElement('div');
 cssLink.innerHTML="<link href=\"classicStyle.css\" rel=\"stylesheet\" type=\"text/css\">";
-document.body.appendChild(cssLink);
+document.head.appendChild(cssLink);

@@ -5,7 +5,10 @@
     chmod("WEBSITES/.$websiteName",777);
     chmod("WEBSITES/.$websiteName./index.html",777);
     $script="<script defer src=\"mainbot.js\"></script>";
+
     exec("cp mainbot.js WEBSITES/$websiteName");
+    exec("cp classicStyle.css WEBSITES/$websiteName");
+
     $handle = fopen("WEBSITES/".$websiteName."/index.html", 'a');
     fwrite($handle,$script);
     fclose($handle);
