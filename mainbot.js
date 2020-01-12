@@ -57,8 +57,7 @@ const elements=document.querySelectorAll('.et');
 
 for(element of elements){
 element.addEventListener("dblclick",function(){
-    const editedText=myprompt();
-    this.innerHTML=editedText;
+    this.innerHTML=myprompt();
 });}
 const chngbtn = document.querySelector('.change');
 const blueArea = document.querySelector('.blue');
