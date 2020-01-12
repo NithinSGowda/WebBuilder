@@ -1,3 +1,9 @@
+var inpbox="<div class=\"inpt\"><div class=\"inpi\"><textarea name=\"text\" placeholder=\"Enter the text here\" class=\"iinput\"></textarea><button class=\"inpb\" id=\"L\" >Insert Link</button><br><button class=\"inpb\" id=\"B\">B</button><button class=\"inpb\" id=\"I\">I</button><button class=\"inpb\" id=\"U\">U</button><input type=\"checkbox\" name=\"shadow\">Shadow&nbsp;&nbsp;<input type=\"color\" class=\"pickerg\"><br><button class=\"submit\">Submit</button></div></div><div class=\"inpl\"><div class=\"inpi\"><textarea name=\"text\" placeholder=\"Enter the text here\"></textarea><br><br><textarea name=\"link\" placeholder=\"Enter the link here\"></textarea><br><br><button class=\"isubmit\">Submit</button></div></div>";
+inpBOX = document.createElement('span');
+inpBOX.innerHTML=inpbox;
+document.body.appendChild(inpBOX);
+
+
 var childrenactivated=0;
 var i=0;
 var cssLink = document.createElement('div');
@@ -24,7 +30,7 @@ function activateChildren(parent){
 }
 
 
-function myprompt(element){
+function myprompt(){
   var iarea=document.querySelector('.inpt');
   iarea.style.display='block';
   isubmitButton=document.querySelector('.isubmit');
@@ -51,7 +57,7 @@ const elements=document.querySelectorAll('.et');
 
 for(element of elements){
 element.addEventListener("dblclick",function(){
-    const editedText=myprompt(this);
+    const editedText=myprompt();
     this.innerHTML=editedText;
 });}
 const chngbtn = document.querySelector('.change');
@@ -356,5 +362,6 @@ for (texts of btns) {
     this.className += " active";
   });
 }
+
 
 

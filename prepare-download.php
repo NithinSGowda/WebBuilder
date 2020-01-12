@@ -8,6 +8,7 @@
 
     exec("cp mainbot.js WEBSITES/$websiteName");
     exec("cp classicStyle.css WEBSITES/$websiteName");
+    exec("cp -r Images WEBSITES/$websiteName");
 
     $handle = fopen("WEBSITES/".$websiteName."/index.html", 'a');
     fwrite($handle,$script);
