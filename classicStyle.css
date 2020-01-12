@@ -176,7 +176,8 @@ input[type="color"]{
 	margin: -105.5px -177.75px 0 0 ;
 	background-color: white;
     padding: 2em;
-    background-color: rgb(46, 45, 45);    
+	background-color: rgb(46, 45, 45);  
+	min-width:23%;    
 }
 .inpb{
     margin: 0.75em;

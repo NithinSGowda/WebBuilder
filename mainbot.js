@@ -1,3 +1,4 @@
+var childrenactivated=0;
 function activateChildren(parent){
   var allChildren = parent.children;
   for(child of allChildren){
@@ -22,7 +23,6 @@ inpBOX.innerHTML=inpbox;
 document.body.appendChild(inpBOX);
 
 
-var childrenactivated=0;
 var i=0;
 var cssLink = document.createElement('div');
 cssLink.innerHTML="<link href=\"classicStyle.css\" rel=\"stylesheet\" type=\"text/css\">";
@@ -40,6 +40,7 @@ function myprompt(){
   isubmitButton=document.querySelector('.isubmit');
   isubmitButton.addEventListener('click',()=>{
     var textHTML= document.querySelector('.iinput').textContent;
+    iarea.style.display='none';
     return textHTML;
   });
 }
