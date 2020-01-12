@@ -32,18 +32,11 @@ var htmlElement1 = document.createElement('div');
 htmlElement1.innerHTML="<a href=\"mailto:oneandonlytobe@gmail.com\" class=\"a5\"><img src=\"Images/question-circle-solid.svg\" width=\"35px\"></a><div class=\"Download a4\" onclick=\"download()\"><img src=\"Images/download-solid.svg\" width=\"30px\"></div>";
 document.body.appendChild(htmlElement1);
 
-
-
 function myprompt(){
   var iarea=document.querySelector('.inpt');
   iarea.style.display='block';
-  isubmitButton=document.querySelector('.isubmit');
-  isubmitButton.addEventListener('click',()=>{
-    var textHTML= document.querySelector('.iinput').textContent;
-    iarea.style.display='none';
-    return textHTML;
-  });
 }
+
 console.log(childrenactivated);
 alert("The website is ready to edit. Happy editing :)");
 
@@ -57,8 +50,17 @@ const elements=document.querySelectorAll('.et');
 
 for(element of elements){
 element.addEventListener("dblclick",function(){
-    this.innerHTML=myprompt();
-});}
+    myprompt();
+    isubmitButton=document.querySelector('.isubmit');
+    isubmitButton.addEventListener('click',()=>{
+    var textHTML= document.querySelector('.iinput').textContent;
+    iarea.style.display='none';
+    this.innerHTML=textHTML;
+    });
+});
+}
+
+
 const chngbtn = document.querySelector('.change');
 const blueArea = document.querySelector('.blue');
 function changeColor(){
