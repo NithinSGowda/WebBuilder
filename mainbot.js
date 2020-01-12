@@ -1,3 +1,21 @@
+function activateChildren(parent){
+  var allChildren = parent.children;
+  for(child of allChildren){
+    if(child.children.length>0){
+      activateChildren(child);
+    }
+    else{
+      child.classList.add("et");
+      childrenactivated++;
+    }
+  }
+}
+activateChildren(document);
+
+
+
+
+
 var inpbox="<div class=\"inpt\"><div class=\"inpi\"><textarea name=\"text\" placeholder=\"Enter the text here\" class=\"iinput\"></textarea><button class=\"inpb\" id=\"L\" >Insert Link</button><br><button class=\"inpb\" id=\"B\">B</button><button class=\"inpb\" id=\"I\">I</button><button class=\"inpb\" id=\"U\">U</button><input type=\"checkbox\" name=\"shadow\">Shadow&nbsp;&nbsp;<input type=\"color\" class=\"pickerg\"><br><button class=\"submit\">Submit</button></div></div><div class=\"inpl\"><div class=\"inpi\"><textarea name=\"text\" placeholder=\"Enter the text here\"></textarea><br><br><textarea name=\"link\" placeholder=\"Enter the link here\"></textarea><br><br><button class=\"isubmit\">Submit</button></div></div>";
 inpBOX = document.createElement('span');
 inpBOX.innerHTML=inpbox;
@@ -16,20 +34,6 @@ document.body.appendChild(htmlElement1);
 
 
 
-function activateChildren(parent){
-  var allChildren = parent.children;
-  for(child of allChildren){
-    if(child.children.length>0){
-      activateChildren(child);
-    }
-    else{
-      child.classList.add("et");
-      childrenactivated++;
-    }
-  }
-}
-
-
 function myprompt(){
   var iarea=document.querySelector('.inpt');
   iarea.style.display='block';
@@ -39,11 +43,6 @@ function myprompt(){
   });
   return textHTML;
 }
-
-
-
-
-activateChildren(document);
 console.log(childrenactivated);
 alert("The website is ready to edit. Happy editing :)");
 
