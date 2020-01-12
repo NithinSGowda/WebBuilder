@@ -48,7 +48,7 @@ function myprompt(element){
 }
 
 console.log(childrenactivated);
-alert(activateChildren+" number of editable elements found. Happy editing :)");
+alert(childrenactivated+" number of editable elements found. Happy editing :)");
 
 
 
