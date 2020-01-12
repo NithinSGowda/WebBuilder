@@ -51,6 +51,7 @@ const elements=document.querySelectorAll('.et');
 for(element of elements){
 element.addEventListener("dblclick",function(){
     myprompt();
+    var iarea=document.querySelector('.inpt');
     isubmitButton=document.querySelector('.isubmit');
     isubmitButton.addEventListener('click',()=>{
     var textHTML= document.querySelector('.iinput').textContent;
