@@ -58,7 +58,6 @@
 	display: inline;
 	list-style-type: none;
 	overflow: hidden;
-	float: right;
 	padding-right: 5em;
 	vertical-align: 50%;
 	padding-top: 0.1em;
@@ -403,7 +402,6 @@ input[type="color"]{
 	left: 37.5%;
 	padding: 10px 1em 10px 1em;
 	border-radius: 7px;
-	//border: 2px solid rgb(255, 251, 0);
 }
 
 .tt3a{
@@ -426,7 +424,6 @@ input[type="color"]{
 	left: 29.5%;
 	padding: 10px 1em 10px 1em;
 	border-radius: 7px;
-	//border: 2px solid rgb(255, 251, 0);
 }
 
 .next{
