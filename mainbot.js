@@ -32,29 +32,36 @@ var htmlElement1 = document.createElement('div');
 htmlElement1.innerHTML="<a href=\"mailto:oneandonlytobe@gmail.com\" class=\"a5\"><img src=\"Images/question-circle-solid.svg\" width=\"35px\"></a><div class=\"Download a4\" onclick=\"download()\"><img src=\"Images/download-solid.svg\" width=\"30px\"></div>";
 document.body.appendChild(htmlElement1);
 
-function myprompt(){
-  var iarea=document.querySelector('.inpt');
-  iarea.style.display='block';
-}
-
-console.log(childrenactivated);
-alert("The website is ready to edit. Happy editing :)");
-
 const allLinks=document.querySelectorAll("a");
 for(linki of allLinks){
   linki.href="javascript:void(0);";
 }
 
 
+
+
+function myprompt(element){
+  var iarea=document.querySelector('.inpt');
+  iarea.style.display='block';
+  console.log(element.innerHTML)
+  document.querySelector('.iinput').value=element.innerHTML;
+}
+
+console.log(childrenactivated);
+alert(activateChildren+" number of editable elements found. Happy editing :)");
+
+
+
 const elements=document.querySelectorAll('.et');
 
 for(element of elements){
 element.addEventListener("dblclick",function(){
-    myprompt();
+    myprompt(this);
     var iarea=document.querySelector('.inpt');
     isubmitButton=document.querySelector('.isubmit');
     isubmitButton.addEventListener('click',()=>{
-    var textHTML= document.querySelector('.iinput').textContent;
+    var textHTML= document.querySelector('.iinput').value;
+    console.log(textHTML)
     iarea.style.display='none';
     this.innerHTML=textHTML;
     });
