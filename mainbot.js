@@ -40,8 +40,8 @@ function myprompt(){
   isubmitButton=document.querySelector('.isubmit');
   isubmitButton.addEventListener('click',()=>{
     var textHTML= document.querySelector('.iinput').textContent;
+    return textHTML;
   });
-  return textHTML;
 }
 console.log(childrenactivated);
 alert("The website is ready to edit. Happy editing :)");
