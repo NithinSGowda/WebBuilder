@@ -25,26 +25,28 @@
 	width: 100%;
 	background-color: rgba(0, 0, 0, 0.822);
 	top: 0;	
-	display: none;
+	color: white;
 }
 .inpi{
 	border: 3px solid rgb(47, 0, 255);
     position: fixed;
-    border-radius: 3px;
+    border-radius: 7px;
 	top: 50%;
 	right: 50%;
 	margin: -105.5px -177.75px 0 0 ;
 	background-color: white;
-    padding: 2em;
+    padding: 3em;
 	background-color: rgb(46, 45, 45);  
-	min-width:23%;    
+	min-width:26%;    
+	min-height: 26%;
 }
 .inpb{
     margin: 0.75em;
-    background-color: blue;
+    background-color: rgb(0, 0, 0);
     border: 0px solid black;
-    border-radius: 3px;
-    padding: 1px 10px 0px 10px;
+    border-radius: 5px;
+	padding: 3px 10px 3px 10px;
+	color: white;
 }
 
 .inpl{
@@ -54,22 +56,41 @@
 .inpt textarea{
     background-color: rgb(14, 14, 14);
     color: white;
-    padding: 10px;
+    padding: 5px;
     resize: none;
     height: 10em;
 }
 
 .inpt #L{
     position: absolute;
-    top: 9%;
+	top: 48%;
 }
 
 .inpt .isubmit{
     position: absolute;
-    left: 40%;
-    margin-top: 2%;
-    margin-bottom: 7%;
+	left: 44%;
+	bottom: 5%;
+	border-radius: 5px;
 }
+
+.inpt #I{
+	position: absolute;
+	bottom: 20%;
+	right: 50%;
+}
+
+.inpt #U{
+	position: absolute;
+	bottom: 20%;
+	right: 60%;
+}
+
+.inpt #B{
+	position: absolute;
+	bottom: 20%;
+	right: 72%;
+}
+
 
 .inpt .pickerg{
     border: none;
@@ -174,4 +195,14 @@
 
 *{
 	position: sticky;
+}
+
+
+input[type="color"]{
+	width: 2rem;
+	height: 1.5rem;
+	background-color: rgb(0, 0, 0);
+	position: absolute;
+	bottom: 23%;
+	right: 30%;
 }
