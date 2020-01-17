@@ -26,6 +26,7 @@
 	background-color: rgba(0, 0, 0, 0.822);
 	top: 0;	
 	color: white;
+	display:none;
 }
 .inpi{
 	border: 3px solid rgb(47, 0, 255);
