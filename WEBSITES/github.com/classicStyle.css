@@ -1,0 +1,209 @@
+.a4{
+	position: fixed;
+	bottom: 3%;
+	right: 2%;
+	border-radius: 50% ;
+	background-color:#5593fd;
+	padding: 10px;
+}
+.a5{
+	position: fixed;
+	bottom: 11%;
+	right: 2%;
+	border-radius: 50% ;
+	background-color: #5593fd;
+	padding: 10px;
+}
+
+.et{
+	cursor: move;
+}
+
+.inpt{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.822);
+	top: 0;	
+	color: white;
+	display:none;
+}
+.inpi{
+	border: 3px solid rgb(47, 0, 255);
+    position: fixed;
+    border-radius: 7px;
+	top: 50%;
+	right: 50%;
+	margin: -105.5px -177.75px 0 0 ;
+	background-color: white;
+    padding: 3em;
+	background-color: rgb(46, 45, 45);  
+	min-width:26%;    
+	min-height: 26%;
+}
+.inpb{
+    margin: 0.75em;
+    background-color: rgb(0, 0, 0);
+    border: 0px solid black;
+    border-radius: 5px;
+	padding: 3px 10px 3px 10px;
+	color: white;
+}
+
+.inpl{
+    display: none;
+}
+
+.inpt textarea{
+    background-color: rgb(14, 14, 14);
+    color: white;
+    padding: 5px;
+    resize: none;
+    height: 10em;
+}
+
+.inpt #L{
+    position: absolute;
+	top: 48%;
+}
+
+.inpt .isubmit{
+    position: absolute;
+	left: 44%;
+	bottom: 5%;
+	border-radius: 5px;
+}
+
+.inpt #I{
+	position: absolute;
+	bottom: 20%;
+	right: 50%;
+}
+
+.inpt #U{
+	position: absolute;
+	bottom: 20%;
+	right: 60%;
+}
+
+.inpt #B{
+	position: absolute;
+	bottom: 20%;
+	right: 72%;
+}
+
+
+.inpt .pickerg{
+    border: none;
+}
+
+.tutorial{
+	min-width: 100%;
+	min-height: 100%;
+	background-color: rgba(0, 0, 0, 0.616);
+	position: fixed;
+	top: 0;
+	color: white;
+	font-size: 2em;
+	padding: 10px 1em 10px 1em;
+	border-radius: 7px;
+	display: none;
+	
+}
+
+.tt1b{
+	position: fixed;
+	top: 30%;
+	left: 35%;
+	padding: 10px 1em 10px 1em;
+	border-radius: 7px;
+	
+}
+
+.arrow{
+	animation-name: tutor;
+	animation-duration: 300ms;
+	animation-iteration-count: 3000;
+}
+@keyframes tutor {
+	from {
+		color: red;
+		transform: scale(1);
+	}
+	to {
+		color: rgb(229, 255, 0);
+		transform: scale(1.1);
+
+	}
+  }
+
+.tt2b{
+	position: fixed;
+	top: 42.5%;
+	left: 37.5%;
+	padding: 10px 1em 10px 1em;
+	border-radius: 7px;
+}
+
+.tt3a{
+	position: fixed;
+	font-size: 1.6em;
+}
+
+.tt3a1{
+	top: 73.8%;
+	left: 60px;
+}
+
+.tt3a2{
+	top: 73.8%;
+	right: 60px;
+}
+.tt3b{
+	position: fixed;
+	top: 68%;
+	left: 29.5%;
+	padding: 10px 1em 10px 1em;
+	border-radius: 7px;
+}
+
+.next{
+	position: fixed;
+	bottom: 3%;
+	right: 2%;
+	background-color: yellow;
+	color: black;
+	font-size: 0.7em;
+	padding: 10px 1em 10px 1em;
+	border-radius: 7px;
+}
+.tt2{
+	display: none;
+}
+.tt3{
+	display: none;
+}
+.next:hover{
+	background-color: rgb(255, 187, 0);
+	cursor: grab;
+}
+
+
+
+.active{
+	text-shadow:  -1px -1px 0 #ffff00, 1px -1px 0 #ffff00, 1px -1px 0 #ffff00, 1px -1px 0 #ffff00;
+}
+
+*{
+	position: sticky;
+}
+
+
+input[type="color"]{
+	width: 2rem;
+	height: 1.5rem;
+	background-color: rgb(0, 0, 0);
+	position: absolute;
+	bottom: 23%;
+	right: 30%;
+}
