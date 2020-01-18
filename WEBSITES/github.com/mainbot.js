@@ -20,11 +20,14 @@ vbox.style.display='none'
 document.body.appendChild(vbox);
 
 
-var inpbox="<div class=\"inpt\"><div class=\"inpi\"><textarea name=\"text\" placeholder=\"Enter the text here\" class=\"iinput\"></textarea><button class=\"inpb\" id=\"L\" >Insert Link</button><br><button class=\"inpb\" id=\"B\">B</button><button class=\"inpb\" id=\"I\">I</button><button class=\"inpb\" id=\"U\">U</button><input type=\"color\" class=\"pickerg\"><br><button class=\"isubmit\">Submit</button></div></div><div class=\"inpl\"><div class=\"inpi\"><textarea name=\"text\" placeholder=\"Enter the text here\"></textarea><br><br><textarea name=\"link\" placeholder=\"Enter the link here\"></textarea><br><br><button class=\"isubmit\">Submit</button></div></div>";
+var inpbox="<div class=\"inpt\"><div class=\"inpi\">  <textarea name=\"text\" style = \"height: 10em; background-color: black; color: white; border-radius: 5px;resize: none; margin-bottom: 5em;\" placeholder=\"Enter the text here\" class=\"iinput\"></textarea><button class=\"inpb\" id=\"L\" >Insert Link</button><br><input type=\"color\" class=\"pickerg\"><br><button class=\"isubmit\">Submit</button></div></div><div class=\"inpl\"><div class=\"inpi\">  <textarea name=\"text\" placeholder=\"Enter the text here\"></textarea><br><br>  <textarea name=\"link\" placeholder=\"Enter the link here\"></textarea><br><br><button class=\"submit\">Submit</button></div></div>";
 inpBOX = document.createElement('span');
 inpBOX.innerHTML=inpbox;
 document.body.appendChild(inpBOX);
 
+var downInst=document.createElement('div');
+downInst.innerHTML="<div class=\"downloader\"><div class=\"intoMark\" onclick=\"remover()\">X</div><div class=\"DBox\"><div class=\"h1h\">You are just 2 steps away from downloading your website</div><div class=\"h2h\">Step 1 : Close this instruction box </div><div class=\"h2h\">Step 2 : Press <span class=\"h4h\">CTRL + S </span></div></div></div>";
+document.body.appendChild(downInst);
 
 var i=0;
 var cssLink = document.createElement('div');
@@ -41,17 +44,17 @@ for(linki of allLinks){
 }
 
 
+var iarea=document.querySelector('.inpt');
 
 
 function myprompt(element){
-  var iarea=document.querySelector('.inpt');
   iarea.style.display='block';
   console.log(element.innerHTML)
   document.querySelector('.iinput').value=element.innerHTML;
 }
 
 console.log(childrenactivated);
-alert(childrenactivated+" number of editable elements found. Happy editing :)");
+alert(childrenactivated+" editable elements found. Happy editing :)");
 
 
 
@@ -67,7 +70,9 @@ element.addEventListener("dblclick",function(){
     console.log(textHTML)
     iarea.style.display='none';
     this.innerHTML=textHTML;
-    });
+    this.classList.remove('active');
+    console.log(this);
+  });
 });
 }
 
@@ -100,22 +105,15 @@ function dl(x){
 function hl(x){
   document.querySelector('.blue').style.backgroundImage='linear-gradient(' + x + ',' + x + ')';
 }
-
+*/
 function download(e){
-    document.querySelector('.downloader').style.display = 'flex';
+      document.querySelector('.downloader').style.display = 'flex';
 }
 
 function remover(e){
   document.querySelector('.downloader').style.display = 'none';
-  const colors = document.querySelectorAll('.colorChanger');
-  for(col of colors)
-  {
-    col.style.display = 'none';
-  }
-  document.querySelector('.jss').innerHTML=' ';
-
 }
-*/
+
 
 for(element of elements)
 {dragElement(element);}
@@ -234,10 +232,6 @@ for (texts of btns) {
 
 
 
-
-
-
-
 const smallBox = document.getElementsByClassName('c');
 		const header = document.querySelector('.blue');
 		window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -249,7 +243,7 @@ const smallBox = document.getElementsByClassName('c');
 		words.appendChild(p);
 	
 		recognition.addEventListener('result', e => {
-			var transcript=Array.from(e.results)
+      var transcript=Array.from(e.results)
 			.map(result=>result[0])
 			.map(result=>result.transcript)
 			.join('')
@@ -372,4 +366,44 @@ const smallBox = document.getElementsByClassName('c');
 		recognition.addEventListener('end',recognition.start);
 	
 		recognition.start();
-		
+    
+
+/*
+
+   var socket = new WebSocket("ws://revasr.reverieinc.com/stream/?api_key=7eb5c7d9836a09af789e3cb03cd2c329c4e42f1a&lang=en&domain=generic");
+/*
+   socket.onopen = function(e) {
+    alert("[open] Connection established");
+    alert("Sending to server");
+    socket.send(e.inputBuffer);
+  };
+
+  socket.onmessage = function(event) {
+    alert(`[message] Data received from server: ${event.data}`);
+  };
+
+  socket.onerror = function(error) {
+    alert(`[error] ${error.message}`);
+  };
+   */
+
+   /*
+  const handleSuccess = function(stream) {
+        socket.send(stream);
+        console.log(stream.id);
+        
+      };
+      socket.onmessage = function(event) {
+        alert(`[message] Data received from server: ${event.data}`);
+      };
+      
+
+      socket.onerror = function(error) {
+        alert(`[error] ${error.message}`);
+      };
+
+//setInterval(function(){navigator.mediaDevices.getUserMedia({ audio: true, video: false }).then(handleSuccess);},1000);
+
+navigator.mediaDevices.getUserMedia({ audio: true, video: false }).then(handleSuccess);
+
+*/

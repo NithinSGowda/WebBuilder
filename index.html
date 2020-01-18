@@ -1,47 +1,46 @@
 <!DOCTYPE html manifest="offline.appcache">
-<head><title>Webin</title>
-<link href="style.css" rel="stylesheet" type="text/css">
-<link href="www.png" rel="icon" type="image/png">
-<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+
+<head>
+    <title>Webin</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="Images/www.png" rel="icon" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
 <meta name="application-name" content="Webin">
 <meta name="description" content="#World's first Web Development tool with over 1.5B+ templates. Build customised replicates of existing websites all over the internet">
 </head>
 
 <body>
-    <div class="cont1">
-        <div class="cont1-a">
-            &lt;webin&gt;
-        </div>
-        <div class="cont2">
-            <div class="cont2head">
-            <div class="cont2-a">
-                &lt;head&gt;
-            </div>
-            #World's first Web Development tool with over 1.7 Billion+ templates
-            <div class="cont2-a">
-                &lt;/head&gt;
-            </div></div>
-            <div class="cont3">
-                <div class="cont3-a">
-                    &lt;!--Build customised replicates of existing websites all over the internet--&gt;
-                </div>
-                <form action="prepare-download.php" method="get" class="inp">
-                Enter the website you want to customise &nbsp
-                <input type="text" name="url" placeholder="example.com" class="url-holder"> 
+    <div class="main">
+    	<br>
+        <h1>Welcome to World's first Web Development tool with over 1.5B+ templates. Build customised replicates of existing websites all over the internet</h1><br><br>
+        <div class="input">
+        	<div class="cont3-a">
+                   Build customised replicates of existing websites all over the internet
+                </div><br><br>
+                <img  class="img" src="Images/mic.png" type="Image/png"><br>
+            <form action="prepare-download.php" method="get" class="inp">
+                <h3>Enter the website you want to customise &nbsp &nbsp</h3><br>
+                <input type="text" name="url" placeholder="example.com" class="url-holder">
                 <input type="submit" class="submit" value="Submit">
-                </form>
-            </div>
-        </div>
-        <div class="cont1-a">
-            &lt;/webin&gt;
+            </form>
         </div>
     </div>
-
+    <div class="icons">
+    	<a href="https://twitter.com/Techin_Studio"><img src="Images/twitter.png" class="links"></a>
+    	<a href="https://www.facebook.com/hackernithin"><img src="Images/facebook.png" class="links"></a>
+    	<a href="https://github.com/NithinSGowda"><img src="Images/github.png" class="links"></a>
+    	<a href="https://www.youtube.com/TechinStudio"><img src="Images/youtube.png" class="links"></a>
+    	<a href="https://www.instagram.com/nithin_s.gowda/"><img src="Images/insta.png" class="links"></a>
+    	<a href="https://www.linkedin.com/in/NithinSGowda"><img src="Images/linkdin.png" class="links"></a>
+    </div>
+    <div class="words"></div>
     <div class="foot">
         &copy; Developed by Nithin S
     </div>
+    <div><input type="button" id="startBtn" class="english" value="English"> 
+    </div>
+    <div><button onclick="play()" class="hindi">Hindi</button></div>
+    <audio class="hin"><source src="hindi.mp3" type="audio/mp3"></audio>
+    <script defer src="intro.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"> </script>
 </body>
-
-</html>
-
-

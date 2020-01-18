@@ -71,7 +71,6 @@ element.addEventListener("dblclick",function(){
     iarea.style.display='none';
     this.innerHTML=textHTML;
     this.classList.remove('active');
-    console.log(this);
   });
 });
 }
