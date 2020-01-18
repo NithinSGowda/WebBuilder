@@ -45,12 +45,13 @@ for(linki of allLinks){
 
 
 var iarea=document.querySelector('.inpt');
-
+var bcpp;
 
 function myprompt(element){
   iarea.style.display='block';
   console.log(element.innerHTML)
   document.querySelector('.iinput').value=element.innerHTML;
+  bcpp=element.innerHTML;
 }
 
 console.log(childrenactivated);
@@ -65,8 +66,14 @@ element.addEventListener("dblclick",function(){
     myprompt(this);
     var iarea=document.querySelector('.inpt');
     isubmitButton=document.querySelector('.isubmit');
+    linkinsertB=document.querySelector('#L');
+    linkinsertB.addEventListener('click',function(){
+      var textLINK=prompt("Enter the link");
+      document.querySelector('.iinput').value="<a href=\""+ textLINK +"\">"+ document.querySelector('.iinput').value + "</a>";
+    });
     isubmitButton.addEventListener('click',()=>{
     var textHTML= document.querySelector('.iinput').value;
+    if(textHTML==""){textHTML=bcpp}
     console.log(textHTML)
     iarea.style.display='none';
     this.innerHTML=textHTML;
@@ -108,10 +115,14 @@ function hl(x){
 */
 function download(e){
       document.querySelector('.downloader').style.display = 'flex';
+      document.querySelector('.intoMark').addEventListener('click',remover());
 }
 
 function remover(e){
   document.querySelector('.downloader').style.display = 'none';
+  document.querySelector('.a5').style.display='none';
+document.querySelector('.a4').style.display='none';
+  document.querySelector('.jss').innerHTML="";
 }
 
 
@@ -265,7 +276,7 @@ const smallBox = document.getElementsByClassName('c');
 				transcript=' ';
 				}
 
-				if(transcript.includes('MOVE IT LEFT')){
+				if(transcript.includes('MOVE IT LEFT') || transcript.includes('MOVE LEFT')){
 				var selectedText = document.querySelector('.active');
 				selectedText.style.position = "absolute";
 				selectedText.style.left = (selectedText.offsetLeft - 100) + "px";
@@ -273,7 +284,7 @@ const smallBox = document.getElementsByClassName('c');
 				transcript=' ';
 				}
 
-				if(transcript.includes('MOVE IT RIGHT')){
+				if(transcript.includes('MOVE IT RIGHT') || transcript.includes('MOVE RIGHT')){
 				var selectedText = document.querySelector('.active');
 				selectedText.style.position = "absolute";
 				selectedText.style.left = (selectedText.offsetLeft + 100) + "px";
@@ -281,7 +292,7 @@ const smallBox = document.getElementsByClassName('c');
 				transcript=' ';
 				}
 
-				if(transcript.includes('MOVE IT UP')){
+				if(transcript.includes('MOVE IT UP') || transcript.includes('MOVE UP')){
 				var selectedText = document.querySelector('.active');
 				selectedText.style.position = "absolute";
 				selectedText.style.top = (selectedText.offsetTop - 100) + "px";
@@ -299,7 +310,7 @@ const smallBox = document.getElementsByClassName('c');
 
         
 
-        if(transcript.includes('CHANGE IT INTO')){
+        if(transcript.includes('CHANGE IT INTO') || transcript.includes('CHANGE IT TO') || transcript.includes('CHANGE TEXT TO')){
           if(document.querySelector('.active')==null){
             alert("Please select something first");
           }
@@ -328,7 +339,7 @@ const smallBox = document.getElementsByClassName('c');
               }
 
 
-            if(transcript.includes('CHANGE COLOUR TO')){
+            if(transcript.includes('CHANGE COLOUR TO') || transcript.includes('CHANGE ITS COLOUR TO')){
               if(document.querySelector('.active')==null){
                 alert("Please select something first");
               }
